@@ -1,4 +1,4 @@
-# Idempotency Gateway API 🚀
+# Idempotency Gateway API 
 
 > A smart payment processing system that ensures every transaction is processed exactly once — no duplicates, no double charges, just smooth payments.
 
@@ -75,7 +75,7 @@ cd backend\Idempotency-gateway
 
 ## How to Test It
 
-### ✅ Test 1: Successful New Payment
+###  TEST 1: Successful New Payment
 
 ```powershell
 Invoke-RestMethod -Uri "http://localhost:8080/api/v1/process-payment" `
@@ -102,7 +102,7 @@ Invoke-RestMethod -Uri "http://localhost:8080/api/v1/process-payment" `
 
 ---
 
-### ✅ Test 2: Duplicate Request (Cache Hit)
+###  TEST 2: Duplicate Request (Cache Hit)
 
 Send the **exact same request** again with the same `X-Idempotency-Key`:
 
@@ -126,7 +126,7 @@ Invoke-RestMethod -Uri "http://localhost:8080/api/v1/process-payment" `
 
 ---
 
-### ❌ Test 3: Missing Idempotency Key
+###  TEST 3: Missing Idempotency Key
 
 ```powershell
 Invoke-RestMethod -Uri "http://localhost:8080/api/v1/process-payment" `
@@ -149,7 +149,7 @@ Invoke-RestMethod -Uri "http://localhost:8080/api/v1/process-payment" `
 
 ---
 
-### ❌ Test 4: Conflict (Different Body)
+###  TEST 4: Conflict (Different Body)
 
 Same key, but **different request body**:
 
