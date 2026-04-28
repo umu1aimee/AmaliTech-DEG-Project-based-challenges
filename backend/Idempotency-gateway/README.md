@@ -409,7 +409,7 @@ mvn spring-boot:run
 |----------|------------|
 | **Language** | Java 17 |
 | **Framework** | Spring Boot 3.x |
-| **Database** | PostgreSQL (or H2 for dev) |
+| **Database** | PostgreSQL |
 | **Build Tool** | Maven |
 | **API Docs** | Swagger/OpenAPI |
 
